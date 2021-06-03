@@ -40,7 +40,7 @@ function upload_car1(){
 }
 window.addEventListener("keydown", my_keydown);
 function my_keydown(e){
-    keyPressed = e.keycode;
+    keyPressed = e.keyCode;
     if(keyPressed == '38')
     {
         car1_up();
@@ -115,13 +115,31 @@ function car1_left(){
         console.log("when left arrow is pressed,x="+ car1_x + ",y="+ car1_y);
         upload();
         upload_car1();
+       upload_car2();
+    }
+}
+function car1_right(){
+    if(car1_x <=700 ){
+        car1_x +=10;
+        console.log("when d is pressed,x="+ car1_x + ",y="+ car1_y);
+        upload();
+        upload_car1();
+        upload_car2();
+    }
+}
+function car2_up(){
+    if(car2_y >= 0){
+        car2_y -=10;
+        console.log("when w is pressed,x="+ car2_x + ",y="+ car2_y);
+        upload();
+        upload_car1();
         upload_car2();
     }
 }
 function car2_right(){
     if(car2_x <=700 ){
         car2_x +=10;
-        console.log("when right arrow is pressed,x="+ car2_x + ",y="+ car2_y);
+        console.log("when d is pressed,x="+ car2_x + ",y="+ car2_y);
         upload();
         upload_car1();
         upload_car2();
@@ -130,7 +148,7 @@ function car2_right(){
 function car2_down(){
     if(car2_y <= 500){
         car2_y +=10;
-        console.log("when down arrow is pressed,x="+ car2_x + ",y="+ car2_y);
+        console.log("when s  is pressed,x="+ car2_x + ",y="+ car2_y);
         upload();
         upload_car1();
         upload_car2();
@@ -139,18 +157,9 @@ function car2_down(){
 function car2_left(){
     if(car2_x >= 0){
         car2_x -=10;
-        console.log("when left arrow is pressed,x="+ car2_x + ",y="+ car2_y);
+        console.log("when a  is pressed,x="+ car2_x + ",y="+ car2_y);
         upload();
         upload_car1();
        upload_car2();
-    }
-}
-function car2_right(){
-    if(car2_x <=700 ){
-        car2_x +=10;
-        console.log("when right arrow is pressed,x="+ car2_x + ",y="+ car2_y);
-        upload();
-        upload_car1();
-        upload_car2();
     }
 }
